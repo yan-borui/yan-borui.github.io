@@ -42,7 +42,8 @@ nav ul li a {
     transition: color 0.3s;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
     color: #007bff;
 }
 
@@ -60,10 +61,19 @@ nav ul li a:hover {
     margin-bottom: 1rem;
 }
 
-.hero .avatar {
+.avatar-container {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.avatar {
     width: 180px;
     height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
     border: 5px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .highlight {
@@ -135,5 +145,10 @@ footer {
     
     nav ul li {
         margin: 10px 0;
+    }
+    
+    .avatar {
+        width: 150px;
+        height: 150px;
     }
 }
