@@ -3,80 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="yan-borui 的个人主页，展示项目与联系方式。">
-    <title>我的个人主页</title>
+    <meta name="description" content="Borui Yan (yan-borui) — 北京大学智能科学与技术专业本科生。研究方向为流体模拟与物理仿真，技术栈涵盖 C++/CUDA、Python、GPU 编程与深度学习。">
+    <meta name="author" content="Borui Yan">
+    <title>Borui Yan — Personal Homepage</title>
+
+    <link rel="dns-prefetch" href="https://api.github.com">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Borui Yan — Personal Homepage">
+    <meta property="og:description" content="北京大学智能科学与技术专业本科生。研究方向为流体模拟与物理仿真，技术栈涵盖 C++/CUDA、Python、GPU 编程与深度学习。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yan-borui.github.io">
+    <meta property="og:image" content="https://yan-borui.github.io/images/bird.jpg">
+    <meta property="og:image:width" content="180">
+    <meta property="og:image:height" content="180">
+    <meta property="og:locale" content="zh_CN">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Borui Yan — Personal Homepage">
+    <meta name="twitter:description" content="北京大学智能科学与技术专业本科生。研究方向为流体模拟与物理仿真。">
+    <meta name="twitter:image" content="https://yan-borui.github.io/images/bird.jpg">
+
+    <link rel="canonical" href="https://yan-borui.github.io">
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Borui Yan",
+        "alternateName": "yan-borui",
+        "url": "https://yan-borui.github.io",
+        "image": "https://yan-borui.github.io/images/bird.jpg",
+        "email": "yan_borui@stu.pku.edu.cn",
+        "affiliation": {
+            "@type": "Organization",
+            "name": "Peking University"
+        },
+        "knowsAbout": [
+            "C++", "CUDA", "Python", "GPU Programming",
+            "Fluid Simulation", "Automatic Differentiation",
+            "RAG", "PyTorch", "Computer Vision"
+        ],
+        "sameAs": ["https://github.com/yan-borui"]
+    }
+    </script>
+
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
+    <a href="#main-content" class="skip-link">跳转到主要内容</a>
+
+    <header id="header">
+        <nav aria-label="主导航">
             <ul>
                 <li><a href="#home">首页</a></li>
-                <li><a href="#about">关于我</a></li>
+                <li><a href="#about">关于</a></li>
+                <li><a href="#research">研究</a></li>
+                <li><a href="#skills">技能</a></li>
                 <li><a href="#projects">项目</a></li>
                 <li><a href="#contact">联系</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
+        <!-- Hero -->
         <section id="home" class="hero">
             <div class="container">
                 <div class="avatar-container">
-                    <img src="images/bird.jpg" alt="yan-borui的头像" class="avatar">
+                    <img
+                        src="images/bird.jpg"
+                        alt="Borui Yan 的头像"
+                        class="avatar"
+                        width="180"
+                        height="180"
+                        loading="eager"
+                    >
                 </div>
-                
-                <h1>你好，我是 <span class="highlight">yan-borui</span></h1>
-                <p>欢迎来到我的个人主页</p>
+                <h1><span id="typing-text"></span><span class="cursor" aria-hidden="true">|</span></h1>
+                <p class="hero-subtitle">智能科学与技术 &nbsp;·&nbsp; 北京大学 &nbsp;·&nbsp; 24级</p>
+                <div class="hero-scroll-indicator" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+                    </svg>
+                </div>
             </div>
         </section>
 
+        <!-- About -->
         <section id="about" class="about">
             <div class="container">
-                <h2>关于我</h2>
-                <p>我是北京大学智能科学与技术专业24级本科生。</p>
+                <h2 class="section-title">关于我</h2>
+
+                <div class="edu-block">
+                    <div class="edu-header">
+                        <h3>北京大学</h3>
+                        <span class="edu-date">2024.9 — 2028.6 (预计)</span>
+                    </div>
+                    <p class="edu-degree">智能科学与技术 本科在读</p>
+                </div>
+
+                <p class="about-bio">
+                    对人工智能、物理模拟和 GPU 编程充满热情。目前在 Visual Computing and Learning Lab
+                    参与欧拉流体模拟相关研究，同时热衷于用 C++ / CUDA 从零构建高性能系统。
+                </p>
             </div>
         </section>
 
-        <section id="projects" class="projects">
+        <!-- Research -->
+        <section id="research" class="research">
             <div class="container">
-                <h2>我的项目</h2>
-                <div class="project-grid">
-                    <div class="github-card-simple">
-                        <div class="card-header">
-                            <i class="fab fa-github"></i>
-                            <h4>AI Project</h4>
-                        </div>
-                        <p>人工智能相关项目，探索机器学习与深度学习的实际应用。</p>
-                        <div class="card-links">
-                            <a href="https://github.com/yan-borui/ai_project" target="_blank" class="github-link">
-                                <i class="fab fa-github"></i> GitHub仓库
-                            </a>
+                <h2 class="section-title">研究方向</h2>
+                <div class="research-card">
+                    <div class="research-header">
+                        <h3>视觉计算与学习实验室 (VCL Lab)</h3>
+                        <span class="research-date">2026 — 至今</span>
+                    </div>
+                    <p class="research-role">本科生科研实习，导师：楚梦渝 教授</p>
+                    <p class="research-stack"><strong>技术栈：</strong>C++ &nbsp;·&nbsp; OpenGL &nbsp;·&nbsp; Eigen</p>
+                    <ul class="research-list">
+                        <li>学习并实现欧拉流体模拟核心组件，专注于压力投影、边界处理及网格化模拟管线</li>
+                        <li>使用 Eigen 进行线性代数运算，结合 OpenGL 实现模拟状态的可视化与调试</li>
+                        <li>探索稀疏线性系统、迭代求解器、内存布局及数值稳定性等性能敏感的科学计算话题</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">技术栈</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>编程语言</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">C++ / C++17</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">CUDA C++</span>
                         </div>
                     </div>
-                    <div class="github-card-simple">
-                        <div class="card-header">
-                            <i class="fab fa-github"></i>
-                            <h4>FirstAidapp</h4>
+                    <div class="skill-category">
+                        <h3>AI & 计算</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">PyTorch</span>
+                            <span class="skill-tag">RAG</span>
+                            <span class="skill-tag">FAISS</span>
+                            <span class="skill-tag">GPU 编程</span>
+                            <span class="skill-tag">自动微分</span>
+                            <span class="skill-tag">数值模拟</span>
                         </div>
-                        <p>急救应用程序，为紧急情况提供快速响应和专业指导。</p>
-                        <div class="card-links">
-                            <a href="https://github.com/yan-borui/FirstAidapp" target="_blank" class="github-link">
-                                <i class="fab fa-github"></i> GitHub仓库
-                            </a>
+                    </div>
+                    <div class="skill-category">
+                        <h3>系统 & 工具</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Linux / WSL</span>
+                            <span class="skill-tag">CMake</span>
+                            <span class="skill-tag">FastAPI</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">OpenGL</span>
+                            <span class="skill-tag">Eigen</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>数学基础</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">概率论</span>
+                            <span class="skill-tag">统计学</span>
+                            <span class="skill-tag">线性代数</span>
+                            <span class="skill-tag">图论</span>
+                            <span class="skill-tag">数据结构与算法</span>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">项目</h2>
+                <p class="projects-intro">我的项目代码都托管在 GitHub 上，欢迎访问。</p>
+                <a href="https://github.com/yan-borui" target="_blank" rel="noopener" class="github-big-link">
+                    <svg width="28" height="28" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                    github.com/yan-borui
+                </a>
             </div>
         </section>
     </main>
 
     <footer id="contact">
         <div class="container">
-            <p>联系我：yan_borui@stu.pku.edu.cn</p>
+            <h2 class="section-title">联系我</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    <a href="mailto:yan_borui@stu.pku.edu.cn">yan_borui@stu.pku.edu.cn</a>
+                </div>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/yan-borui" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+                    <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                </a>
+            </div>
+            <p class="footer-copy">&copy; 2025 Borui Yan</p>
         </div>
     </footer>
+
+    <button id="back-to-top" aria-label="返回顶部" title="返回顶部">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
 
     <script src="script.js"></script>
 </body>
