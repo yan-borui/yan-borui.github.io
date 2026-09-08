@@ -1,145 +1,49 @@
-// ============================================
-// DOM Ready
-// ============================================
+// Native anchor navigation preserves URL fragments, history, and keyboard focus.
 document.addEventListener('DOMContentLoaded', () => {
-    initSmoothScroll();
-    initActiveNav();
-    initNavScroll();
-    initBackToTop();
-    initTypingEffect();
-    initScrollReveal();
-});
+    const header = document.querySelector('.masthead');
+    const backToTop = document.getElementById('back-to-top');
+    const year = document.getElementById('copyright-year');
+    const sections = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'))
+        .map(link => ({
+            link,
+            section: document.getElementById(link.hash.slice(1))
+        }))
+        .filter(item => item.section);
 
-// ============================================
-// Smooth Scroll
-// ============================================
-function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    });
-}
+    if (year) year.textContent = new Date().getFullYear();
 
-// ============================================
-// Active Nav on Scroll
-// ============================================
-function initActiveNav() {
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('nav a');
+    let scheduled = false;
 
-    const observer = new IntersectionObserver(
-        entries => {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                const id = entry.target.getAttribute('id');
-                navLinks.forEach(link => {
-                    link.classList.toggle(
-                        'active',
-                        link.getAttribute('href').slice(1) === id
-                    );
-                });
-            });
-        },
-        {
-            rootMargin: '-45% 0px -45% 0px',
-            threshold: 0.01
+    function updateNavigation() {
+        const offset = Math.max(0, header ? header.getBoundingClientRect().bottom : 0) + 48;
+        let current = sections[0];
+
+        for (const item of sections) {
+            if (item.section.getBoundingClientRect().top <= offset) current = item;
         }
-    );
 
-    sections.forEach(section => observer.observe(section));
-}
+        // Short final sections may never reach the top of the viewport.
+        const atBottom = window.scrollY > 0 &&
+            window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+        if (atBottom && sections.length) current = sections[sections.length - 1];
 
-// ============================================
-// Nav Background on Scroll
-// ============================================
-function initNavScroll() {
-    const header = document.getElementById('header');
-    let ticking = false;
-
-    window.addEventListener('scroll', () => {
-        if (!ticking) {
-            requestAnimationFrame(() => {
-                header.classList.toggle('scrolled', window.scrollY > 50);
-                ticking = false;
-            });
-            ticking = true;
+        for (const item of sections) {
+            if (item === current) item.link.setAttribute('aria-current', 'location');
+            else item.link.removeAttribute('aria-current');
         }
-    });
-}
 
-// ============================================
-// Back to Top Button
-// ============================================
-function initBackToTop() {
-    const btn = document.getElementById('back-to-top');
-    let ticking = false;
-
-    window.addEventListener('scroll', () => {
-        if (!ticking) {
-            requestAnimationFrame(() => {
-                btn.classList.toggle('visible', window.scrollY > 500);
-                ticking = false;
-            });
-            ticking = true;
-        }
-    });
-
-    btn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-}
-
-// ============================================
-// Typing Effect
-// ============================================
-function initTypingEffect() {
-    const el = document.getElementById('typing-text');
-    const text = '你好，我是 Borui Yan';
-    let i = 0;
-
-    function type() {
-        if (i <= text.length) {
-            el.textContent = text.slice(0, i);
-            i++;
-            setTimeout(type, i === 1 ? 200 : 80 + Math.random() * 60);
-        } else {
-            setTimeout(() => {
-                i = 0;
-                type();
-            }, 4000);
-        }
+        if (backToTop) backToTop.hidden = window.scrollY < 500;
+        scheduled = false;
     }
 
-    type();
-}
+    function scheduleUpdate() {
+        if (scheduled) return;
+        scheduled = true;
+        window.requestAnimationFrame(updateNavigation);
+    }
 
-// ============================================
-// Scroll Reveal Animation
-// ============================================
-function initScrollReveal() {
-    const revealElements = document.querySelectorAll(
-        '.skill-category, .edu-block, .research-card, .section-title, .about-bio'
-    );
-
-    const observer = new IntersectionObserver(
-        entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('reveal', 'visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        },
-        {
-            threshold: 0.15,
-            rootMargin: '0px 0px -30px 0px'
-        }
-    );
-
-    revealElements.forEach(el => observer.observe(el));
-}
+    window.addEventListener('scroll', scheduleUpdate, { passive: true });
+    window.addEventListener('resize', scheduleUpdate);
+    window.addEventListener('pageshow', scheduleUpdate);
+    updateNavigation();
+});

@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Borui Yan (yan-borui) — 北京大学智能科学与技术专业本科生。研究方向为流体模拟与物理仿真，技术栈涵盖 C++/CUDA、Python、GPU 编程与深度学习。">
+    <meta name="description" content="闫博睿 Borui Yan，北京大学智能科学与技术专业本科生，VCL Lab 本科生科研实习生。关注流体仿真、科学机器学习与 GPU 计算。">
     <meta name="author" content="Borui Yan">
-    <title>Borui Yan — Personal Homepage</title>
-
-    <link rel="dns-prefetch" href="https://api.github.com">
+    <title>Borui Yan 闫博睿 — Personal Homepage</title>
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Borui Yan — Personal Homepage">
-    <meta property="og:description" content="北京大学智能科学与技术专业本科生。研究方向为流体模拟与物理仿真，技术栈涵盖 C++/CUDA、Python、GPU 编程与深度学习。">
+    <meta property="og:title" content="Borui Yan 闫博睿 — Personal Homepage">
+    <meta property="og:description" content="北京大学智能科学与技术专业本科生，VCL Lab 本科生科研实习生。研究兴趣：流体仿真、科学机器学习与 GPU 计算。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yan-borui.github.io">
     <meta property="og:image" content="https://yan-borui.github.io/images/bird.jpg">
@@ -21,8 +19,8 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Borui Yan — Personal Homepage">
-    <meta name="twitter:description" content="北京大学智能科学与技术专业本科生。研究方向为流体模拟与物理仿真。">
+    <meta name="twitter:title" content="Borui Yan 闫博睿 — Personal Homepage">
+    <meta name="twitter:description" content="北京大学本科生。关注流体仿真、科学机器学习与 GPU 计算。">
     <meta name="twitter:image" content="https://yan-borui.github.io/images/bird.jpg">
 
     <link rel="canonical" href="https://yan-borui.github.io">
@@ -33,7 +31,7 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Borui Yan",
-        "alternateName": "yan-borui",
+        "alternateName": ["闫博睿", "yan-borui"],
         "url": "https://yan-borui.github.io",
         "image": "https://yan-borui.github.io/images/bird.jpg",
         "email": "yan_borui@stu.pku.edu.cn",
@@ -44,188 +42,170 @@
         "knowsAbout": [
             "C++", "CUDA", "Python", "GPU Programming",
             "Fluid Simulation", "Automatic Differentiation",
-            "RAG", "PyTorch", "Computer Vision"
+            "Scientific Machine Learning", "PyTorch", "Graph Neural Networks"
         ],
         "sameAs": ["https://github.com/yan-borui"]
     }
     </script>
 
+    <meta name="color-scheme" content="light dark">
+    <link rel="icon" href="images/bird.jpg" type="image/jpeg">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">跳转到主要内容</a>
-
-    <header id="header">
-        <nav aria-label="主导航">
-            <ul>
-                <li><a href="#home">首页</a></li>
-                <li><a href="#about">关于</a></li>
-                <li><a href="#research">研究</a></li>
-                <li><a href="#skills">技能</a></li>
-                <li><a href="#projects">项目</a></li>
-                <li><a href="#contact">联系</a></li>
+    <header id="home" class="masthead" tabindex="-1">
+        <nav class="masthead-inner" aria-label="主导航">
+            <a class="site-name" href="#home" lang="en">Borui Yan’s site</a>
+            <ul class="nav-links">
+                <li><a href="#about" aria-current="location" lang="en">About</a></li>
+                <li><a href="#research" lang="en">Research</a></li>
+                <li><a href="#experience" lang="en">Experience</a></li>
+                <li><a href="#projects" lang="en">Projects</a></li>
+                <li><a href="#education" lang="en">Education</a></li>
+                <li><a href="#skills" lang="en">Skills</a></li>
+                <li><a href="#contact" lang="en">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main id="main-content">
-        <!-- Hero -->
-        <section id="home" class="hero">
-            <div class="container">
-                <div class="avatar-container">
-                    <img
-                        src="images/bird.jpg"
-                        alt="Borui Yan 的头像"
-                        class="avatar"
-                        width="180"
-                        height="180"
-                        loading="eager"
-                    >
-                </div>
-                <h1><span id="typing-text"></span><span class="cursor" aria-hidden="true">|</span></h1>
-                <p class="hero-subtitle">智能科学与技术 &nbsp;·&nbsp; 北京大学 &nbsp;·&nbsp; 24级</p>
-                <div class="hero-scroll-indicator" aria-hidden="true">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
-                    </svg>
-                </div>
+    <div class="page-layout">
+        <aside class="author-profile" aria-label="个人信息">
+            <img class="author-avatar" src="images/bird.jpg" alt="闫博睿的头像：一只白色小鸟" width="170" height="170" fetchpriority="high">
+            <div class="author-details">
+                <p class="author-name"><span lang="en">Borui Yan</span> <span class="chinese-name">闫博睿</span></p>
+                <p class="author-bio" lang="en">Peking University</p>
+                <p class="author-role">智能科学与技术 · 本科生</p>
+                <ul class="author-links">
+                    <li>
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                        <span lang="en">Beijing, China</span>
+                    </li>
+                    <li>
+                        <a href="mailto:yan_borui@stu.pku.edu.cn">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 6 9 7 9-7"/></svg>
+                            <span lang="en">Email</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/yan-borui" target="_blank" rel="noopener noreferrer">
+                            <svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                            <span lang="en">GitHub</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </section>
+        </aside>
 
-        <!-- About -->
-        <section id="about" class="about">
-            <div class="container">
-                <h2 class="section-title">关于我</h2>
+        <main id="main-content" class="page-content" tabindex="-1">
+            <section id="about" aria-labelledby="about-title">
+                <h1 id="about-title" lang="en">Self-Introduction</h1>
+                <p>你好，我是<strong>闫博睿（Borui Yan）</strong>，北京大学 2024 级智能科学与技术专业本科生，预计于 2028 年 6 月毕业。</p>
+                <p>目前在<strong>北京大学可视计算与学习实验室（VCL Lab）</strong>参与本科生科研，指导教师为<strong>楚梦渝助理教授</strong>。我的工作围绕流场的生成建模与数值仿真展开，也喜欢用 C++ / CUDA 从零构建计算系统。</p>
+                <p class="research-interests"><strong>研究兴趣：</strong>流体仿真、科学机器学习、GPU 计算。</p>
+            </section>
 
-                <div class="edu-block">
-                    <div class="edu-header">
-                        <h3>北京大学</h3>
-                        <span class="edu-date">2024.9 — 2028.6 (预计)</span>
-                    </div>
-                    <p class="edu-degree">智能科学与技术 本科在读</p>
+            <section id="research" aria-labelledby="research-title">
+                <h2 id="research-title" lang="en">Research</h2>
+                <div class="entry-heading">
+                    <h3>北京大学可视计算与学习实验室</h3>
+                    <p class="entry-date"><time datetime="2026-02">2026.02</time> — 至今</p>
                 </div>
+                <p class="entry-meta">本科生科研实习生 · 指导教师：楚梦渝助理教授</p>
+                <ul class="work-list">
+                    <li>
+                        <h4>Graph-Video DiT：不规则网格上的流场生成</h4>
+                        <p>以首帧速度 / 压力（UVP）潜变量为条件，通过非因果时空全注意力与 20 步 DDIM，联合生成未来 <strong>64 帧</strong>非定常流场。</p>
+                        <p>在椭圆流场任务的 4,560 条轨迹、364,490 帧数据上建立轨迹级划分、VGAE 编码和 96 段评测，分析速度、压力、涡量、散度及频谱等指标；该实验中，64 帧端到端生成约 <strong>0.39 秒 / 段</strong>。</p>
+                    </li>
+                    <li>
+                        <h4><a href="https://huggingface.co/datasets/DingDong1921/openlb-multigeometry-flow" target="_blank" rel="noopener noreferrer">OpenLB 多几何流场数据集</a></h4>
+                        <p>构建并公开覆盖 <strong>8 类几何、456 条轨迹、274,056 帧</strong>的数据集，固定 408 / 24 / 24 的训练、验证、测试轨迹划分。</p>
+                        <p>建立数据完整性审计、仅使用训练集的归一化，以及统一的单帧输入 / 64 帧预测协议与测试集隔离规范。</p>
+                    </li>
+                </ul>
+                <p class="tech-line">Python · PyTorch · PyG · CUDA · OpenLB</p>
+            </section>
+            <section id="experience" aria-labelledby="experience-title">
+                <h2 id="experience-title" lang="en">Experience</h2>
+                <div class="entry-heading">
+                    <h3 lang="en">Optiver FutureFocus — Technology Track</h3>
+                    <p class="entry-date"><time datetime="2026-06-29">2026.06.29</time> — <time datetime="2026-07-03">07.03</time></p>
+                </div>
+                <p class="entry-meta">五日制交易技术项目 · 上海</p>
+                <p>学习做市、实时交易、期权与波动率等市场基础，参与 Circuit Breaker、FPGA、System Design、Optibook 及最终 Showdown，并在上海技术团队跟岗。</p>
+                <p>项目结束后，<strong>获得 Optiver (Shanghai) 的 2027 Shanghai Software Developer Summer Internship Offer</strong>。</p>
+            </section>
 
-                <p class="about-bio">
-                    对人工智能、物理模拟和 GPU 编程充满热情。目前在 Visual Computing and Learning Lab
-                    参与欧拉流体模拟相关研究，同时热衷于用 C++ / CUDA 从零构建高性能系统。
-                </p>
-            </div>
-        </section>
-
-        <!-- Research -->
-        <section id="research" class="research">
-            <div class="container">
-                <h2 class="section-title">研究方向</h2>
-                <div class="research-card">
-                    <div class="research-header">
-                        <h3>视觉计算与学习实验室 (VCL Lab)</h3>
-                        <span class="research-date">2026 — 至今</span>
+            <section id="projects" aria-labelledby="projects-title">
+                <h2 id="projects-title" lang="en">Selected Projects</h2>
+                <article class="project-entry" aria-labelledby="fluid-project-title">
+                    <div class="entry-heading">
+                        <h3 id="fluid-project-title"><a href="https://github.com/yan-borui/vcx-sim-final-project" target="_blank" rel="noopener noreferrer">变分流固耦合仿真</a></h3>
+                        <p class="entry-date"><time datetime="2026-06">2026.06</time></p>
                     </div>
-                    <p class="research-role">本科生科研实习，导师：楚梦渝 教授</p>
-                    <p class="research-stack"><strong>技术栈：</strong>C++ &nbsp;·&nbsp; OpenGL &nbsp;·&nbsp; Eigen</p>
-                    <ul class="research-list">
-                        <li>学习并实现欧拉流体模拟核心组件，专注于压力投影、边界处理及网格化模拟管线</li>
-                        <li>使用 Eigen 进行线性代数运算，结合 OpenGL 实现模拟状态的可视化与调试</li>
-                        <li>探索稀疏线性系统、迭代求解器、内存布局及数值稳定性等性能敏感的科学计算话题</li>
+                    <p class="entry-meta">团队课程项目 · 三维流体–刚体耦合与约束优化</p>
+                    <ul class="detail-list">
+                        <li>负责变分压力投影、子网格流动与自由液面分离，在三维 MAC 网格和 FLIP/PIC 粒子框架中实现流体–刚体双向压力耦合。</li>
+                        <li>将压力与壁面接触建模为稀疏线性系统及非负约束二次规划，使用预条件共轭梯度、active-set、Schur 补与 Woodbury 低秩更新求解。</li>
+                        <li>实现体积分数加权与 Mesh SDF 不规则刚体，验证压力残差、KKT 互补条件、非穿透约束及复杂边界稳定性。</li>
                     </ul>
-                </div>
-            </div>
-        </section>
+                    <p class="tech-line">C++20 · Eigen · 稀疏线性代数 · 约束优化 · OpenGL</p>
+                </article>
 
-        <!-- Skills -->
-        <section id="skills" class="skills">
-            <div class="container">
-                <h2 class="section-title">技术栈</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>编程语言</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">C++ / C++17</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">CUDA C++</span>
-                        </div>
+                <article class="project-entry" aria-labelledby="cuda-project-title">
+                    <div class="entry-heading">
+                        <h3 id="cuda-project-title"><a href="https://github.com/yan-borui/cuda-dl-framework" target="_blank" rel="noopener noreferrer">从零实现 CUDA 深度学习框架</a></h3>
+                        <p class="entry-date"><time datetime="2025-11">2025.11</time> — <time datetime="2026-01">2026.01</time></p>
                     </div>
-                    <div class="skill-category">
-                        <h3>AI & 计算</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">PyTorch</span>
-                            <span class="skill-tag">RAG</span>
-                            <span class="skill-tag">FAISS</span>
-                            <span class="skill-tag">GPU 编程</span>
-                            <span class="skill-tag">自动微分</span>
-                            <span class="skill-tag">数值模拟</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>系统 & 工具</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Git</span>
-                            <span class="skill-tag">Linux / WSL</span>
-                            <span class="skill-tag">CMake</span>
-                            <span class="skill-tag">FastAPI</span>
-                            <span class="skill-tag">PostgreSQL</span>
-                            <span class="skill-tag">OpenGL</span>
-                            <span class="skill-tag">Eigen</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>数学基础</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">概率论</span>
-                            <span class="skill-tag">统计学</span>
-                            <span class="skill-tag">线性代数</span>
-                            <span class="skill-tag">图论</span>
-                            <span class="skill-tag">数据结构与算法</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                    <p class="entry-meta">课程项目 · 轻量级张量计算与神经网络训练框架</p>
+                    <ul class="detail-list">
+                        <li>设计 CPU/CUDA 双后端张量对象与 Python 绑定，完成显存管理、主机 / 设备数据搬运和算子分发。</li>
+                        <li>使用 CUDA 与 cuBLAS 实现全连接、im2col 卷积、池化、激活及 Softmax-Cross-Entropy 的前向与显式反向算子。</li>
+                        <li>实现带动量 SGD、权重衰减、梯度裁剪与学习率衰减，在 CIFAR-10 上完成 30 轮端到端训练。</li>
+                    </ul>
+                    <p class="tech-line">C++14 · CUDA C++ · cuBLAS · pybind11 · Python</p>
+                </article>
+                <p class="more-projects"><a href="https://github.com/yan-borui" target="_blank" rel="noopener noreferrer">更多项目见 GitHub <span aria-hidden="true">↗</span></a></p>
+            </section>
 
-        <!-- Projects -->
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2 class="section-title">项目</h2>
-                <p class="projects-intro">我的项目代码都托管在 GitHub 上，欢迎访问。</p>
-                <a href="https://github.com/yan-borui" target="_blank" rel="noopener" class="github-big-link">
-                    <svg width="28" height="28" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                    </svg>
-                    github.com/yan-borui
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <footer id="contact">
-        <div class="container">
-            <h2 class="section-title">联系我</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                        <polyline points="22,6 12,13 2,6"/>
-                    </svg>
-                    <a href="mailto:yan_borui@stu.pku.edu.cn">yan_borui@stu.pku.edu.cn</a>
+            <section id="education" aria-labelledby="education-title">
+                <h2 id="education-title" lang="en">Education</h2>
+                <div class="entry-heading">
+                    <h3>北京大学</h3>
+                    <p class="entry-date"><time datetime="2024-09">2024.09</time> — <time datetime="2028-06">2028.06</time>（预计）</p>
                 </div>
-            </div>
-            <div class="footer-social">
-                <a href="https://github.com/yan-borui" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
-                    <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                    </svg>
-                </a>
-            </div>
-            <p class="footer-copy">&copy; 2025 Borui Yan</p>
+                <p>智能科学与技术 · 理学学士在读<br>GPA：3.547 / 4.0</p>
+                <p><strong>相关课程：</strong>人工智能中的编程（96）、深度学习中的高效计算方法（95）、人工智能中的数学（92）、人工智能基础（90）、算法设计与分析（88.5）。</p>
+            </section>
+
+            <section id="skills" aria-labelledby="skills-title">
+                <h2 id="skills-title" lang="en">Skills</h2>
+                <dl class="skills-list">
+                    <div><dt>编程</dt><dd>C++、Python、CUDA C++</dd></div>
+                    <div><dt>系统与工具</dt><dd>Git、Linux / WSL、CMake、OpenGL、Eigen</dd></div>
+                    <div><dt>人工智能与计算</dt><dd>PyTorch、GPU 编程、数值仿真、自动微分</dd></div>
+                    <div><dt>数学基础</dt><dd>概率论、统计学、线性代数、图论、数据结构与算法</dd></div>
+                    <div><dt>英语</dt><dd>IELTS 7.5（阅读 9.0、听力 8.5）；CET-6 581</dd></div>
+                </dl>
+            </section>
+
+            <section id="contact" aria-labelledby="contact-title">
+                <h2 id="contact-title" lang="en">Contact</h2>
+                <p class="contact-links"><a href="mailto:yan_borui@stu.pku.edu.cn">yan_borui@stu.pku.edu.cn</a><span class="contact-separator" aria-hidden="true">/</span><a href="https://github.com/yan-borui" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+            </section>
+        </main>
+    </div>
+
+    <footer class="page-footer">
+        <div class="footer-inner">
+            <p>© <span id="copyright-year">2026</span> Borui Yan · 闫博睿</p>
+            <a href="#home">返回顶部 <span aria-hidden="true">↑</span></a>
         </div>
     </footer>
-
-    <button id="back-to-top" aria-label="返回顶部" title="返回顶部">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-            <path d="M18 15l-6-6-6 6"/>
-        </svg>
-    </button>
-
-    <script src="script.js"></script>
+    <a id="back-to-top" href="#home" aria-label="返回顶部" title="返回顶部" hidden>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 14 6-6 6 6M12 8v13"/></svg>
+    </a>
 </body>
 </html>
